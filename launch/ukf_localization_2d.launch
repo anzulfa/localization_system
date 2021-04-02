@@ -2,8 +2,8 @@
 <launch>
 
 	<rosparam command="load" file="$(find golfi)/config/ukf_params.yaml" />
-	<!-- <node name="ukf_localization_2d" pkg="golfi" type="ukf_localization_2d" output="screen" /> -->
-	<node name="relative_localization_2d" pkg="golfi" type="relative_localization_2d" output="screen" />
+	<node name="ukf_localization_2d" pkg="golfi" type="ukf_localization_2d" output="screen" />
+	<!-- <node name="relative_localization_2d" pkg="golfi" type="relative_localization_2d" output="screen" /> -->
 	<node name="utm" pkg="gps_common" type="utm_odometry_node" />
 	<!-- <node name="utm_2" pkg="gps_common" type="utm_odometry_node_2" /> -->
 	<!-- <node name="copy_gps" pkg="golfi" type="copy_gps" /> -->

@@ -7,7 +7,7 @@
 #include <Eigen/Cholesky>
 #include <Eigen/Core>
 #include <tf/transform_broadcaster.h>
-#include <golfi/ukf_states.h>
+#include <localization_system/ukf_states.h>
 #include <geometry_msgs/Twist.h>
 #include <cmath>
 
@@ -16,7 +16,7 @@ using namespace std;
 
 sensor_msgs::Imu imu; // to store IMU data
 nav_msgs::Odometry utm; //to store UTM data from GNSS
-golfi::ukf_states golfi_msg; // custom message to store UKF state values
+localization_system::ukf_states golfi_msg; // custom message to store UKF state values
 nav_msgs::Odometry odom; // published odometry message
 
 int N = 5.; // number of states
@@ -277,7 +277,7 @@ int main(int argc, char**argv) {
   ros::Subscriber tach_sub = n.subscribe("/sensor_velocity", 10, tachCallback);
   ros::Subscriber imu_sub = n.subscribe("/imu", 10, imuCallback);
   ros::Subscriber gnss_sub = n.subscribe("/utm", 10, gnssCallback);
-  ros::Publisher ukf_pub = n.advertise<golfi::ukf_states>("ukf_states", 10);
+  ros::Publisher ukf_pub = n.advertise<localization_system::ukf_states>("ukf_states", 10);
   ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry>("odom",10);
   ros::Rate loop_rate(50); // UKF frequency
   geometry_msgs::TransformStamped odom_trans;

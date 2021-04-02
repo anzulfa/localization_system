@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(golfi)
+project(localization_system)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -121,7 +121,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES golfi
+#  LIBRARIES localization_system
   CATKIN_DEPENDS
     eigen_conversions
     message_runtime
@@ -144,7 +144,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/golfi.cpp
+#   src/${PROJECT_NAME}/localization_system.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -155,7 +155,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/golfi_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/localization_system_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -219,7 +219,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_golfi.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_localization_system.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
@@ -228,24 +228,12 @@ include_directories(
 # catkin_add_nosetests(test)
 
 add_executable(copy_gps src/copy_gps.cpp)
-add_executable(gps_copy src/gps_copy.cpp)
-add_executable(yaw_plot src/yaw_plot.cpp)
 add_executable(relative_localization_2d src/relative_localization_2d.cpp)
 add_executable(ukf_localization_2d src/ukf_localization_2d.cpp)
-add_executable(ukf_localization_2d_orientasi_imu_gnss src/ukf_localization_2d_orientasi_imu_gnss.cpp)
-add_executable(ukf_localization_2d_cmps12 src/ukf_localization_2d_cmps12.cpp)
-add_executable(yaw_imu_pub src/yaw_imu_pub.cpp)
 
 target_link_libraries(copy_gps ${catkin_LIBRARIES})
-target_link_libraries(gps_copy ${catkin_LIBRARIES})
-target_link_libraries(yaw_plot ${catkin_LIBRARIES})
 target_link_libraries(relative_localization_2d ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES})
 target_link_libraries(ukf_localization_2d ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES})
-target_link_libraries(ukf_localization_2d_orientasi_imu_gnss ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES})
-target_link_libraries(ukf_localization_2d_cmps12 ${catkin_LIBRARIES} ${EIGEN3_LIBRARIES})
-target_link_libraries(yaw_imu_pub ${catkin_LIBRARIES})
 
-add_dependencies(ukf_localization_2d golfi_generate_messages_cpp)
-add_dependencies(ukf_localization_2d_orientasi_imu_gnss golfi_generate_messages_cpp)
-add_dependencies(ukf_localization_2d_cmps12 golfi_generate_messages_cpp)
-add_dependencies(relative_localization_2d golfi_generate_messages_cpp)
+add_dependencies(ukf_localization_2d localization_system_generate_messages_cpp)
+add_dependencies(relative_localization_2d localization_system_generate_messages_cpp)
