@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<robot name="awin_golf_cart">
+
+  <material name="chassis_mat">
+      <color rgba="0.15 0.5 0.4 1"/>
+  </material>
+  <material name="tire_mat">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <origin rpy="0 0 1.57079633" xyz="1.2 -1.035 -0.1"/>
+      <geometry>
+        <mesh filename="package://golfcart_description/meshes/GolfCart.stl"/>
+      </geometry>
+      <material name="chassis_mat"/>
+    </visual>
+  </link>
+
+  <!-- Roda kanan depan -->
+  <link name="right_front_wheel">
+      <visual>
+        <geometry>
+          <cylinder radius="0.173025" length="0.11"/>
+        </geometry>
+        <material name="tire_mat"/>
+        <origin rpy="0 1.57075 1.57075" xyz="0 0 0"/>
+      </visual>
+  </link>
+  <joint name="base_to_right_front_wheel" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_front_wheel"/>
+    <origin xyz="0.725 -0.42 0.173025"/>
+  </joint>
+
+  <!-- Roda kanan belakang -->
+  <link name="right_rear_wheel">
+      <visual>
+        <geometry>
+          <cylinder radius="0.173025" length="0.12"/>
+        </geometry>
+        <material name="tire_mat"/>
+        <origin rpy="0 1.57075 1.57075" xyz="0 0 0"/>
+      </visual>
+  </link>
+  <joint name="base_to_right_rear_wheel" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_rear_wheel"/>
+    <origin xyz="-0.825 -0.47 0.173025"/>
+  </joint>
+
+    <!-- Roda kiri depan -->
+  <link name="left_front_wheel">
+      <visual>
+        <geometry>
+          <cylinder radius="0.173025" length="0.11"/>
+        </geometry>
+        <material name="tire_mat"/>
+        <origin rpy="0 1.57075 1.57075" xyz="0 0 0"/>
+      </visual>
+  </link>
+  <joint name="base_to_left_front_wheel" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_front_wheel"/>
+    <origin xyz="0.725 0.42 0.173025"/>
+  </joint>
+
+  <!-- Roda kiri belakang -->
+  <link name="left_rear_wheel">
+      <visual>
+        <geometry>
+          <cylinder radius="0.173025" length="0.12"/>
+        </geometry>
+        <material name="tire_mat"/>
+        <origin rpy="0 1.57075 1.57075" xyz="0 0 0"/>
+      </visual>
+  </link>
+  <joint name="base_to_left_rear_wheel" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_rear_wheel"/>
+    <origin xyz="-0.825 0.47 0.173025"/>
+  </joint>
+</robot>

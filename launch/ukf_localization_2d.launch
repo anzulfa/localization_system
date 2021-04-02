@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+	<rosparam command="load" file="$(find golfi)/config/ukf_params.yaml" />
+	<!-- <node name="ukf_localization_2d" pkg="golfi" type="ukf_localization_2d" output="screen" /> -->
+	<node name="relative_localization_2d" pkg="golfi" type="relative_localization_2d" output="screen" />
+	<node name="utm" pkg="gps_common" type="utm_odometry_node" />
+	<!-- <node name="utm_2" pkg="gps_common" type="utm_odometry_node_2" /> -->
+	<!-- <node name="copy_gps" pkg="golfi" type="copy_gps" /> -->
+
+	<arg name="model" default="$(find golfi)/config/green_golf_cart.xacro" />
+  <param name="robot_description" textfile="$(arg model)" />
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" />
+
+	<node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_map_odom" args="0.0 0.0 0.0 0.0 0.0 0.0 map odom" />
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_bl_gps" args="0.0 0.0 0.0 0.0 0.0 0.0 base_link fix_baru" /> -->
+  <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_odom_baselink" args="0.0 0.0 0.0 0.0 0.0 0.0 odom base_link" /> -->
+
+  <arg name="rvizconfig" default="$(find golfi)/config/config.rviz" />
+  <node pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" name="rviz" />
+	<!-- <node pkg="mapviz" type="mapviz" name="mapviz" output="screen"></node>
+  <node pkg="swri_transform_util" type="initialize_origin.py" name="initialize_origin" clear_params="true" /> -->
+
+</launch>

@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/anzulfa/KULIAH/TA/thesis_ws/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/geographic_info/geodesy/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/gps_umd/gps_common/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/mapviz/mapviz/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/mapviz/mapviz_plugins/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/mapviz/multires_image/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/robot_localization/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/rqt_multiplot_plugin/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/mapviz/tile_map/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/ultah_atwin/include/**",
+        "/home/anzulfa/KULIAH/TA/thesis_ws/src/variant/variant_topic_tools/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

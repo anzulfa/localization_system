@@ -1,0 +1,12 @@
+time stamp
+float64 x
+float64 y
+float32 vx
+float32 vy
+float64 vx_gnss
+float64 vy_gnss
+float64 v_gnss
+float64 v_tach
+float32 yaw_est
+float32 yaw_imu
+float32 yaw_dydx
