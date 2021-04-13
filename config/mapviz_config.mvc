@@ -1,0 +1,71 @@
+capture_directory: ~
+fixed_frame: odom
+target_frame: <none>
+fix_orientation: false
+rotate_90: false
+enable_antialiasing: true
+show_displays: true
+show_status_bar: true
+show_capture_tools: true
+window_width: 1301
+window_height: 744
+view_scale: 0.0762776
+offset_x: -17.6781
+offset_y: -15.05167
+use_latest_transforms: true
+background: "#a0a0a4"
+displays:
+  - type: mapviz_plugins/tile_map
+    name: satellite map
+    config:
+      visible: true
+      collapsed: true
+      custom_sources:
+        - base_url: http://localhost:8080/wmts/gm_layer/gm_grid/{level}/{x}/{y}.png
+          max_zoom: 19
+          name: snider
+          type: wmts
+      bing_api_key: ""
+      source: snider
+  - type: mapviz_plugins/navsat
+    name: GPS
+    config:
+      visible: true
+      collapsed: true
+      topic: /fix
+      color: "#ffffff"
+      draw_style: lines
+      position_tolerance: 0
+      buffer_size: 100000
+  - type: mapviz_plugins/odometry
+    name: relative_localization
+    config:
+      visible: true
+      collapsed: true
+      topic: /spll
+      color: "#ffff00"
+      draw_style: lines
+      position_tolerance: 0
+      buffer_size: 0
+      show_laps: false
+      show_covariance: false
+      show_all_covariances: false
+      static_arrow_sizes: false
+      arrow_size: 25
+      show_timestamps: 0
+  - type: mapviz_plugins/odometry
+    name: ukf_localization
+    config:
+      visible: true
+      collapsed: true
+      topic: /odom
+      color: "#00ff00"
+      draw_style: lines
+      position_tolerance: 0
+      buffer_size: 1000000
+      show_laps: false
+      show_covariance: false
+      show_all_covariances: false
+      static_arrow_sizes: false
+      arrow_size: 10
+      show_timestamps: 0
