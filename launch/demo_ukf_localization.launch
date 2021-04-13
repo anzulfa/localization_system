@@ -14,9 +14,6 @@
 
 	<arg name="rvizconfig" default="$(find localization_system)/config/config.rviz" />
 	<node pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" name="rviz" />
-
-	<!-- <node pkg="mapviz" type="mapviz" name="mapviz" output="screen"></node>
-	<node pkg="swri_transform_util" type="initialize_origin.py" name="initialize_origin" clear_params="true" /> -->
 	
 	<node pkg="rosbag" type="play" name="rosbag_play" output="screen" args="$(find localization_system)/demo/demo.bag --topics /imu /fix /sensor_velocity"/>
 </launch>
