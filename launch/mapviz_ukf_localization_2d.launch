@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+	<rosparam command="load" file="$(find localization_system)/config/ukf_params.yaml" />
+	<node name="ukf_localization_2d" pkg="localization_system" type="ukf_localization_2d" output="screen" />
+	<node name="utm" pkg="gps_common" type="utm_odometry_node" />
+	<node name="copy_gps" pkg="localization_system" type="copy_gps" />
+
+	<arg name="model" default="$(find localization_system)/robot_model/green_golf_cart.xacro" />
+	<param name="robot_description" textfile="$(arg model)" />
+	<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" />
+
+	<node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_map_odom" args="0.0 0.0 0.0 0.0 0.0 0.0 map odom" />
+
+	<node pkg="mapviz" type="mapviz" name="mapviz" output="screen">
+		<param name="config" value="$(find localization_system)/config/mapviz_config.mvc"/>
+	</node>
+	<node pkg="swri_transform_util" type="initialize_origin.py" name="initialize_origin" clear_params="true" />
+
+</launch>
