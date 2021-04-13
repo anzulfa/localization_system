@@ -27,7 +27,7 @@ roslaunch localization_system demo_ukf_localization.launch
 
 ## Preview
 This is an example of when you run the demo and activate the AerialMapDisplay.
-![demo preview](https://github.com/anzulfa/localization_system/tree/main/demo/demo.png)
+![demo preview](https://github.com/anzulfa/localization_system/blob/main/demo/demo.png?raw=true)
 
 ## Additional
 ### Relative Localization
@@ -57,4 +57,4 @@ roslaunch localization_system mapviz_relative_localization_2d.launch
 ```
 
 Mapviz visualization preview:
-![Mapviz preview](https://github.com/anzulfa/localization_system/tree/main/demo/mapviz_example.png)
+![Mapviz preview](https://github.com/anzulfa/localization_system/blob/main/demo/mapviz_example.png?raw=true)
