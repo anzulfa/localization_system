@@ -2,10 +2,10 @@
 This package is used to estimate a car's position in UTM coordinate (x,y) based on data from GNSS, IMU, and wheel speed sensor that is fused using Unscented Kalman Filter.
 
 ## Requirements
-1. [Robot Operating System (ROS)] (https://www.ros.org/), this package is tested on [ROS Kinetic] (http://wiki.ros.org/kinetic/Installation/Ubuntu) and [ROS Melodic] (http://wiki.ros.org/melodic/Installation/Ubuntu).
-2. [gps_common] (https://github.com/swri-robotics/gps_umd) ROS package
-3. [rviz_satellite] (https://github.com/nobleo/rviz_satellite) ROS package (optional)
-4. [mapviz] (https://github.com/swri-robotics/mapviz) ROS package (optional)
+1. [Robot Operating System (ROS)](https://www.ros.org/), this package is tested on [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu) and [ROS Melodic](http://wiki.ros.org/melodic/Installation/Ubuntu).
+2. [gps_common](https://github.com/swri-robotics/gps_umd) ROS package
+3. [rviz_satellite](https://github.com/nobleo/rviz_satellite) ROS package (optional)
+4. [mapviz](https://github.com/swri-robotics/mapviz) ROS package (optional)
 
 ## Installation
 1. Clone this package and add it to your catkin workspace.
@@ -27,7 +27,7 @@ roslaunch localization_system demo_ukf_localization.launch
 
 ## Preview
 This is an example of when you run the demo and activate the AerialMapDisplay.
-![demo preview] (https://github.com/anzulfa/localization_system/tree/main/demo/demo.png)
+![demo preview](https://github.com/anzulfa/localization_system/tree/main/demo/demo.png)
 
 ## Additional
 ### Relative Localization
@@ -41,9 +41,9 @@ roslaunch localization_system demo_relative_localization.launch
 ```
 
 ### Mapviz
-You can also view the 2D visualization of the localization system using [mapviz] (https://github.com/swri-robotics/mapviz). This visualization uses google map plugin for mapviz created by Daniel Snider. You can find the complete documentation [here] (https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite).
+You can also view the 2D visualization of the localization system using [mapviz](https://github.com/swri-robotics/mapviz). This visualization uses google map plugin for mapviz created by Daniel Snider. You can find the complete documentation [here](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite).
 
-In order to show the satellite map in mapviz, you have to install [docker] (https://docs.docker.com/engine/install/) in your system, then run this commands:
+In order to show the satellite map in mapviz, you have to install [docker](https://docs.docker.com/engine/install/) in your system, then run this commands:
 ```bash
 sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
 ```
