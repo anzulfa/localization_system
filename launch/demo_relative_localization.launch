@@ -15,5 +15,5 @@
     <!-- <node pkg="mapviz" type="mapviz" name="mapviz" output="screen"></node>
     <node pkg="swri_transform_util" type="initialize_origin.py" name="initialize_origin" clear_params="true" /> -->
 
-    <node pkg="rosbag" type="play" name="rosbag_play" output="screen" args="$(find localization_system)/bag/demo.bag --topics /imu /fix /sensor_velocity"/>
+    <node pkg="rosbag" type="play" name="rosbag_play" output="screen" args="$(find localization_system)/demo/demo.bag --topics /imu /fix /sensor_velocity"/>
 </launch>
