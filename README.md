@@ -23,7 +23,7 @@ roslaunch localization_system demo_ukf_localization.launch
 ### Important Notes
 1. This package expects a topic called `/imu` for imu message and a topic called `/sensor_velocity` for wheel speed sensor message. You can change the topic names in the nodes located in src.
 2. For GNSS message, you can set it in the gps_umd package in gps_common/src/utm_odometry_node.cpp. To be able to use this package, you have to change the published topic to `/utm` and set the subscribed topic depending on your GNSS topic.
-3. If you want to activate a satellite-map in the Rviz, check the AerialMapDisplay checkbox in the Rviz config settings.
+3. If you want to activate a satellite-map in Rviz, check the AerialMapDisplay checkbox in the Rviz config settings.
 
 ## Preview
 This is an example of when you run the demo and activate the AerialMapDisplay.
@@ -43,7 +43,7 @@ roslaunch localization_system demo_relative_localization.launch
 ### Mapviz
 You can also view the 2D visualization of the localization system using [mapviz](https://github.com/swri-robotics/mapviz). This visualization uses google map plugin for mapviz created by Daniel Snider. You can find the complete documentation [here](https://github.com/danielsnider/MapViz-Tile-Map-Google-Maps-Satellite).
 
-In order to show the satellite map in mapviz, you have to install [docker](https://docs.docker.com/engine/install/) in your system, then run this commands:
+In order to show the satellite map in mapviz, you have to install [docker](https://docs.docker.com/engine/install/) in your system, then run this command on your terminal:
 ```bash
 sudo docker run -p 8080:8080 -d -t -v ~/mapproxy:/mapproxy danielsnider/mapproxy
 ```
