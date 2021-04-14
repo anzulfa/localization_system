@@ -21,9 +21,9 @@ For a quick demo, run this command on your terminal:
 roslaunch localization_system demo_ukf_localization.launch
 ```
 ### Important Notes
-1. This package expects a topic called `/imu` for imu message and a topic called `/sensor_velocity` for wheel speed sensor message. You can change the topic names in the nodes located in src.
+1. This package expects a `sensor_msgs/Imu` message in a topic called `/imu` for IMU data and a `geometry_msgs/Twist` message in a topic called `/sensor_velocity` for wheel speed sensor data.
 2. For GNSS message, you can set it in the gps_umd package in gps_common/src/utm_odometry_node.cpp. To be able to use this package, you have to change the published topic to `/utm` and set the subscribed topic depending on your GNSS topic.
-3. If you want to activate a satellite-map in Rviz, check the AerialMapDisplay checkbox in the Rviz config settings.
+3. To activate a satellite-map in Rviz, check the AerialMapDisplay checkbox in the Rviz config settings.
 
 ## Preview
 This is an example of when you run the demo and activate the AerialMapDisplay.
