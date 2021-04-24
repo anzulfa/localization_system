@@ -17,4 +17,5 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 - [ ] make the parameters vars customized (berat)
 - [ ] early stopping callback
 - [ ] scaling of the mutation increments
+- [ ] buat pilihan jenis **mutasi** dan **persilangan**
 
