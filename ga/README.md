@@ -1,4 +1,4 @@
-in the process of tidying up and transforming the jupyter ntoebook into a clean, neat, modular pys
+in the process of tidying up and transforming the jupyter ntoebook into a clean, neat, modular set of pys
 
 ### to dos: 
 
