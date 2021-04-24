@@ -1,16 +1,18 @@
 in the process of tidying up and transforming the jupyter ntoebook into a clean, neat, modular pys
 
 ### to dos: 
-#### - [x] improvement to the algorithms
 
+- [ ]
+#### tidying up with modularity to pys
 - [x] pindah ke path yg bener dan semua files pengikutnya disesuaiin (LAUNCH gimana ya) 
 - [ ] numpy yg penting cuman buat arg sort ga si (cuman di fungsi ambil bag berarti?). yg lain ganti list
 - [x] apus semua path file di folder d di awal launch
-- [ ] coba pengganti ! (%?) buat di py biasa
+- [ ] coba pengganti ! (%?) buat di py script
 - [x] masukin readme
 - [ ] semua yg panjang2 di main (termasuk 3 operator) jadi fungsi masing2 (class ga)
 
-#### improvement to the algorithms
+- [ ]
+improvement to the algorithms
 - [x] output tuned.yaml di akhir proses loop (baik setelah akhir generasi atau callback)
 - [ ] plot realtime progres eror di to do (berat)
 - [ ] make the parameters vars customized (berat)
