@@ -1,0 +1,7 @@
+R_gnss: [0.0001, 0, 0, 0.0001]
+R_imu: 0.0025
+R_tach: 0.25
+initial_estimate_covariance_P: &id001 [10, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 10, 0,
+  0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 1]
+kappa: -2
+process_noise_covariance_Q: *id001

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <rosparam command ="load" file="$(find localization_system)/ga/config/temp.yaml"/>
+
+	<node name="ukf_localization_2d" pkg="localization_system" type="ukf_localization_2d" output="screen" />
+ 	<node name="utm" pkg="gps_common" type="utm_odometry_node" />
+    
+ 	<node pkg="rosbag" type="play" name="rosbag_play" clear_params="true" output="screen" args="$(find localization_system)/ga/bag/9okt_8_2.bag --topics /fix /imu /sensor_velocity "  required="true"/> 
+    	<node pkg="rosbag" type="record" name="rosbag_record" clear_params="true" args="record -O $(find localization_system)/ga/bag/ga_temp.bag --a" />
+<!--batesin pake -u biar estimasi yang di akhir2 ga ngelebihin bates ground truth yang dibuat oleh utm_terhubung-->
+
+</launch>
