@@ -4,6 +4,7 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 
 #### tidying up with modularity to pys 
 - [x] py script fungsional
+- [ ] rapi
 - supporting:
 - [x] pindah ke path yg bener dan semua files pengikutnya disesuaiin (LAUNCH gimana ya) 
 - [ ] numpy yg penting cuman buat arg sort ga si (cuman di fungsi ambil bag berarti?). yg lain ganti list
