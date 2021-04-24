@@ -11,6 +11,8 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 - [ ] semua yg panjang2 di main (termasuk 3 operator) jadi fungsi masing2 (class ga)
 - [x] parameter global harus dioper jadi argumen tiap fungsi lain (untuk mendukung saat dijadikan moduler)
 
+- [ ] py script fungsional
+
 #### improvement to the algorithms
 - [x] output tuned.yaml di akhir proses loop (baik setelah akhir generasi atau callback)
 - [ ] plot realtime progres eror di to do (berat)
