@@ -6,7 +6,7 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 - [x] pindah ke path yg bener dan semua files pengikutnya disesuaiin (LAUNCH gimana ya) 
 - [ ] numpy yg penting cuman buat arg sort ga si (cuman di fungsi ambil bag berarti?). yg lain ganti list
 - [x] apus semua path file di folder d di awal launch
-- [ ] coba pengganti ! (%?) buat di py script
+- [x] coba pengganti ! (%?) buat di py script -- os.system("terminal command")
 - [x] masukin readme
 - [ ] semua yg panjang2 di main (termasuk 3 operator) jadi fungsi masing2 (class ga)
 - [x] parameter global harus dioper jadi argumen tiap fungsi lain (untuk mendukung saat dijadikan moduler)
