@@ -16,6 +16,7 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 
 
 #### improvement to the algorithms
+- [ ] reducing unnecessary package therefore dependencies (like sklearn thats used only for the mse...)
 - [x] output tuned.yaml di akhir proses loop (baik setelah akhir generasi atau callback)
 - [ ] plot realtime progres eror di to do (berat)
 - [ ] make the parameters vars customized (berat)
