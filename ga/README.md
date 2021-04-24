@@ -26,4 +26,4 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 the parameters obtained from the GA tuning process can be found as a YAML file named tuned.yaml in the config folder. You may modify the params of any of the launch file and change the rosparam line to take the tuned.yaml file like so:
 
 
-![rosparam_tuned_dark](https://user-images.githubusercontent.com/67263982/115954031-ec77bb80-a518-11eb-9713-eb52181be6cc.png)
+![rosparam dark](https://user-images.githubusercontent.com/67263982/115954070-1cbf5a00-a519-11eb-858e-427c511f5e34.png)
