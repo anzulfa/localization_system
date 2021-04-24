@@ -9,7 +9,7 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 - [ ] coba pengganti ! (%?) buat di py script
 - [x] masukin readme
 - [ ] semua yg panjang2 di main (termasuk 3 operator) jadi fungsi masing2 (class ga)
-- [ ] parameter global harus dioper jadi argumen tiap fungsi lain (untuk mendukung saat dijadikan moduler)
+- [x] parameter global harus dioper jadi argumen tiap fungsi lain (untuk mendukung saat dijadikan moduler)
 
 #### improvement to the algorithms
 - [x] output tuned.yaml di akhir proses loop (baik setelah akhir generasi atau callback)
