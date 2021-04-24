@@ -2,7 +2,7 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 
 ### to dos: 
 
-#### tidying up with modularity to pys
+#### tidying up with modularity to pys- [ ] py script fungsional
 - [x] pindah ke path yg bener dan semua files pengikutnya disesuaiin (LAUNCH gimana ya) 
 - [ ] numpy yg penting cuman buat arg sort ga si (cuman di fungsi ambil bag berarti?). yg lain ganti list
 - [x] apus semua path file di folder d di awal launch
@@ -10,7 +10,7 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 - [x] masukin readme
 - [ ] semua yg panjang2 di main (termasuk 3 operator) jadi fungsi masing2 (class ga)
 - [x] parameter global harus dioper jadi argumen tiap fungsi lain (untuk mendukung saat dijadikan moduler)
-- [ ] py script fungsional
+
 
 #### improvement to the algorithms
 - [x] output tuned.yaml di akhir proses loop (baik setelah akhir generasi atau callback)
