@@ -24,6 +24,7 @@ in the process of tidying up and transforming the jupyter ntoebook into a clean,
 - [ ] early stopping callback
 - [ ] scaling of the mutation increments
 - [ ] buat pilihan jenis **mutasi** dan **persilangan**
+- [ ] command line arguments (--)
 
 ### the result
 The parameters obtained from the GA tuning process can be found as a YAML file named tuned.yaml in the config folder. To utilize these, you may modify the params of any of the launch file and change the rosparam line to take the tuned.yaml file like so:
